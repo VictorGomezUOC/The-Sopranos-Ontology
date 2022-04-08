@@ -1,0 +1,2959 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/victor/ontologies/the_sopranos#"
+     xml:base="http://www.semanticweb.org/victor/ontologies/the_sopranos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:the_sopranos="http://www.semanticweb.org/victor/ontologies/the_sopranos#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos/1.0.0"/>
+        <rdfs:comment>The Sopranos Ontology
+
+Author: Víctor Gómez Ramos</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#airedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#airedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRatingIs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRatingIs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#directs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#directs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRatingIs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRatingIs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#isDirectedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#isDirectedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#isPlayedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#isPlayedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#plays"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#isWonBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#isWonBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Award"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#plays -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#plays">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRatingIs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRatingIs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#won -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#won">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#rating"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#rating"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#numSeasonEpisodes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#numSeasonEpisodes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#rating"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#rating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#rating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Award -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Award">
+        <rdfs:sameAs>https://dbpedia.org/ontology/Award</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Character -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Creator -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Creator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Director -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode">
+        <rdfs:sameAs>https://dbpedia.org/ontology/episode</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Place"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Award"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Music -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Music"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#OpeningTheme -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#OpeningTheme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#OriginalSoundTrack -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#OriginalSoundTrack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Person -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person">
+        <rdfs:sameAs>https://dbpedia.org/ontology/person</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Place -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Place">
+        <rdfs:sameAs>https://dbpedia.org/ontology/place</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Award"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating">
+        <rdfs:sameAs>https://dbpedia.org/ontology/rating</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season">
+        <rdfs:sameAs>https://dbpedia.org/ontology/season</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Studios -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Studios">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Year -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year">
+        <rdfs:sameAs>https://dbpedia.org/ontology/year</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_187bddbe_7a75_4f0c_9108_cf9fd900caf6 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_187bddbe_7a75_4f0c_9108_cf9fd900caf6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <rdfs:label xml:lang="es">AwardedActor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_8ddf577b_0a40_469d_9843_98ba9147f461 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_8ddf577b_0a40_469d_9843_98ba9147f461">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <rdfs:label xml:lang="es">GuestDirector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#A_Hit_Is_a_Hit -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#A_Hit_Is_a_Hit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Matthew_Penn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Adriana_La_Cerva -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Adriana_La_Cerva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Drea_de_Matteo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Aida_Turturro -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Aida_Turturro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Janice_Soprano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Kaisha"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Kennedy_and_Heidi"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pax_Soprana"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rat_Pack"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Stage_5"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Blue_Comet"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Fleshy_Part_of_the_Thigh"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Ride"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Strong,_Silent_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Due_Respect -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Due_Respect">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Happy_Families... -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Happy_Families...">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rodrigo_García"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#College"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#D-Girl"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#For_All_Debts_Public_and_Private"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Full_Leather_Jacket"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#He_Is_Risen"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Irregular_Around_the_Margins"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Isabella"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Knight_in_White_Satin_Armor"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Test_Dream"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#University"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Guy_Walks_into_a_Psychiatrist&apos;s_Office..."/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._Ruggerio&apos;s_Neighborhood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Amour_Fou -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Amour_Fou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Andy_Wolk -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Andy_Wolk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Boca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Another_Toothpick -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Another_Toothpick">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Anthony_Soprano_Jr. -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Anthony_Soprano_Jr.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Robert_Iler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Army_of_One -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Army_of_One">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Artie_Bucco -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Artie_Bucco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Ventimiglia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Boca -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Boca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Andy_Wolk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Brad_Grey -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Brad_Grey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Bust_Out -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Bust_Out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Calling_All_Cars -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Calling_All_Cars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Carmela_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Carmela_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Edie_Falco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Chasing_It -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Chasing_It">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher_Moltisanti -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher_Moltisanti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Michael_Imperioli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Cuts -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Cuts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mike_Figgis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Stones -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Stones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#College -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#College">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Commendatori -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Commendatori">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Corrado_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Corrado_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dominic_Chianese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#D-Girl -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#D-Girl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Dan_Attias -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dan_Attias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mergers_and_Acquisitions"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Telltale_Moozadell"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#46_Long"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Danny_Leiner -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Danny_Leiner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Luxury_Lounge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Chase -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Chase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Creator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Made_in_America"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Sopranos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Nutter -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Nutter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Join_the_Club"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Do_Not_Resuscitate -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Do_Not_Resuscitate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Martin_Bruestle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Dominic_Chianese -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dominic_Chianese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Corrado_Soprano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Down_Neck -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Down_Neck">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Senna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Drea_de_Matteo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Drea_de_Matteo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Adriana_La_Cerva"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actress_in_a_Drama_Series"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Edie_Falco -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Edie_Falco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Carmela_Soprano"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actress_in_a_Drama_Series"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actress_in_a_Television_Series_–_Drama"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Eloise -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Eloise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Hayman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Employee_of_the_Month -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Employee_of_the_Month">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Everybody_Hurts -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Everybody_Hurts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Federico_Castelluccio -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Federico_Castelluccio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Furio_Giunta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#For_All_Debts_Public_and_Private -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#For_All_Debts_Public_and_Private">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Fortunate_Son -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Fortunate_Son">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#From_Where_to_Eternity -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#From_Where_to_Eternity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Full_Leather_Jacket -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Full_Leather_Jacket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Funhouse -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Funhouse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Furio_Giunta -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Furio_Giunta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Federico_Castelluccio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#He_Is_Risen -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#He_Is_Risen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Fortunate_Son"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#From_Where_to_Eternity"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nobody_Knows_Anything"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pie-O-My"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#House_Arrest -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#House_Arrest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#I_Dream_of_Jeannie_Cusamano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#I_Dream_of_Jeannie_Cusamano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Ilene_S._Landress -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Ilene_S._Landress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#In_Camelot -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#In_Camelot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Irregular_Around_the_Margins -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Irregular_Around_the_Margins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Isabella -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Isabella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Another_Toothpick"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mayham"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Weight"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#...To_Save_Us_All_from_Satan&apos;s_Power"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Gandolfini -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Gandolfini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Soprano"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actor_in_a_Drama_Series"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actor_in_a_Television_Series_–_Drama"/>
+        <rdfs:sameAs>https://dbpedia.org/page/James_Gandolfini</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Hayman -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Hayman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Eloise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Jamie-Lynn_Sigler -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jamie-Lynn_Sigler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadow_Soprano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Janice_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Janice_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Aida_Turturro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Jennifer_Melfi -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jennifer_Melfi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Bracco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Due_Respect"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Army_of_One"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Bust_Out"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Employee_of_the_Month"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Funhouse"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#I_Dream_of_Jeannie_Cusamano"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Marco_Polo"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadowlands"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#No_Show"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Happy_Wanderer"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Watching_Too_Much_Television"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Whitecaps"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Where&apos;s_Johnny?"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Ventimiglia -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Ventimiglia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Artie_Bucco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Johnny_Cakes -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Johnny_Cakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Join_the_Club -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Join_the_Club">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Nutter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Kaisha -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Kaisha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Kennedy_and_Heidi -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Kennedy_and_Heidi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Lee_Tamahori -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lee_Tamahori">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Toodle-Fucking-Oo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Live_Free_or_Die -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Live_Free_or_Die">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Livia_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Livia_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nancy_Marchand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Long_Term_Parking -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Long_Term_Parking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Bracco -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Bracco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jennifer_Melfi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Senna -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lorraine_Senna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Down_Neck"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Luxury_Lounge -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Luxury_Lounge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Danny_Leiner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Made_in_America -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Made_in_America">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Chase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Marco_Polo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Marco_Polo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Martin_Bruestle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Martin_Bruestle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Do_Not_Resuscitate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Matthew_Penn -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Matthew_Penn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#A_Hit_Is_a_Hit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Matthew_Weiner -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Matthew_Weiner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mayham -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mayham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadow_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadow_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jamie-Lynn_Sigler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadowlands -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Meadowlands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Members_Only -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Members_Only">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mergers_and_Acquisitions -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mergers_and_Acquisitions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dan_Attias"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Michael_Imperioli -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Michael_Imperioli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher_Moltisanti"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actor_in_a_Drama_Series"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mike_Figgis -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mike_Figgis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Cuts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mitchell_Burgess -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mitchell_Burgess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Nancy_Marchand -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nancy_Marchand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Livia_Soprano"/>
+        <won rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Supporting_Actress_–_Series,_Miniseries,_or_Television_Film"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Nick_Gomez -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nick_Gomez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Denial,_Anger,_Acceptance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#No_Show -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#No_Show">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Nobody_Knows_Anything -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nobody_Knows_Anything">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Nuovo_Vesubio_Restaurant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nuovo_Vesubio_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actor_in_a_Drama_Series -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actor_in_a_Drama_Series">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Gandolfini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actress_in_a_Drama_Series -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Lead_Actress_in_a_Drama_Series">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Edie_Falco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actor_in_a_Drama_Series -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actor_in_a_Drama_Series">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Michael_Imperioli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actress_in_a_Drama_Series -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Outstanding_Supporting_Actress_in_a_Drama_Series">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Drea_de_Matteo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Paulie_Gualtieri -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Paulie_Gualtieri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Sirico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Pax_Soprana -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pax_Soprana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Peter_Bogdanovich -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Peter_Bogdanovich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Sentimental_Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Phil_Abraham -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Phil_Abraham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Remember_When"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Pie-O-My -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pie-O-My">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Henry_J._Bronchtein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Pine_Barrens -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pine_Barrens">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Punta_Dura_Restaurant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Punta_Dura_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Rat_Pack -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rat_Pack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Remember_When -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Remember_When">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Phil_Abraham"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Robert_Iler -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Robert_Iler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Anthony_Soprano_Jr."/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Robin_Green -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Robin_Green">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Rodrigo_García -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Rodrigo_García">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#All_Happy_Families..."/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.46</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.22</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S01_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.45</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.62</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.97</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S02_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.64</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.87</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.46</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S03_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.26</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.99</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.48</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S04_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.43</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.8</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.98</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S05_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.14</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.6</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.9</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P1_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.47</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_AverageRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_AverageRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"/>
+        <averageRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.23</averageRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_FinaleRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_FinaleRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"/>
+        <finaleRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.9</finaleRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_PremiereRating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#S06P2_PremiereRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"/>
+        <premiereRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.66</premiereRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Salvatore_Bonpensiero -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Salvatore_Bonpensiero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Vincent_Pastore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Satin_Dolls -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Satin_Dolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#1999"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2000"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2001"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2002"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2004"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2006"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"/>
+        <airedIn rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#2007"/>
+        <numSeasonEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</numSeasonEpisodes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Second_Opinion -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Second_Opinion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Sentimental_Education -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Sentimental_Education">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Peter_Bogdanovich"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Silvercup_Studios -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Silvercup_Studios">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Studios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Silvio_Dante -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Silvio_Dante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steven_Van_Zandt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Soprano_Home_Movies -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Soprano_Home_Movies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Stage_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Stage_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Everybody_Hurts"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#In_Camelot"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Pine_Barrens"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._&amp;_Mrs._John_Sacrimoni_Request..."/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Shill -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Shill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Moe_n&apos;_Joe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Steven_Van_Zandt -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steven_Van_Zandt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Silvio_Dante"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Terence_Winter -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Terence_Winter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Walk_Like_a_Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Blue_Comet -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Blue_Comet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Fleshy_Part_of_the_Thigh -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Fleshy_Part_of_the_Thigh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Happy_Wanderer -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Happy_Wanderer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Knight_in_White_Satin_Armor -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Knight_in_White_Satin_Armor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Legend_of_Tennessee_Moltisanti -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Legend_of_Tennessee_Moltisanti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Ride -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Ride">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Second_Coming -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Second_Coming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Sopranos -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Sopranos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#David_Chase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Telltale_Moozadell -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Telltale_Moozadell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dan_Attias"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Test_Dream -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Test_Dream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Weight -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Weight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Amour_Fou"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Calling_All_Cars"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Chasing_It"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Christopher"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Cold_Stones"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Commendatori"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#House_Arrest"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Johnny_Cakes"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Live_Free_or_Die"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Long_Term_Parking"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Members_Only"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Second_Opinion"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Soprano_Home_Movies"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Legend_of_Tennessee_Moltisanti"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Second_Coming"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Two_Tonys"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Unidentified_Black_Males"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Whoever_Did_This"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Big_Girls_Don&apos;t_Cry"/>
+        <directs rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Proshai,_Livushka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Sirico -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Sirico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Paulie_Gualtieri"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Soprano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Soprano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+        <isPlayedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Gandolfini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Soprano_House -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tony_Soprano_House">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Toodle-Fucking-Oo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Toodle-Fucking-Oo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Lee_Tamahori"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Two_Tonys -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Two_Tonys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Unidentified_Black_Males -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Unidentified_Black_Males">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#University -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Vesubio_Restaurant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Vesubio_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Vincent_Pastore -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Vincent_Pastore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+        <plays rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Salvatore_Bonpensiero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Walk_Like_a_Man -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Walk_Like_a_Man">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Terence_Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Watching_Too_Much_Television -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Watching_Too_Much_Television">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Whitecaps -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Whitecaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Whoever_Did_This -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Whoever_Did_This">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#...To_Save_Us_All_from_Satan&apos;s_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#...To_Save_Us_All_from_Satan&apos;s_Power">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Jack_Bender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#1999 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#1999">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2000 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#2007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#2007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#46_Long -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#46_Long">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dan_Attias"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Bada_Bing! -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Bada_Bing!">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actor_in_a_Television_Series_–_Drama -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actor_in_a_Television_Series_–_Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#James_Gandolfini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actress_in_a_Television_Series_–_Drama -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Actress_in_a_Television_Series_–_Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Edie_Falco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Supporting_Actress_–_Series,_Miniseries,_or_Television_Film -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Best_Supporting_Actress_–_Series,_Miniseries,_or_Television_Film">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards"/>
+        <isWonBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nancy_Marchand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Big_Girls_Don&apos;t_Cry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Big_Girls_Don&apos;t_Cry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Centanni&apos;s_Meat_Market -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Centanni&apos;s_Meat_Market">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Denial,_Anger,_Acceptance -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Denial,_Anger,_Acceptance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Nick_Gomez"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Dr._Melfi&apos;s_Office -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Dr._Melfi&apos;s_Office">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Guy_Walks_into_a_Psychiatrist&apos;s_Office... -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Guy_Walks_into_a_Psychiatrist&apos;s_Office...">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_2"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Manolo&apos;s_Restaurant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Manolo&apos;s_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Moe_n&apos;_Joe -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Moe_n&apos;_Joe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Shill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._&amp;_Mrs._John_Sacrimoni_Request... -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._&amp;_Mrs._John_Sacrimoni_Request...">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_6_Part_1"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Steve_Buscemi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._Ruggerio&apos;s_Neighborhood -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Mr._Ruggerio&apos;s_Neighborhood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Allen_Coulter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Proshai,_Livushka -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Proshai,_Livushka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_3"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Tim_Van_Patten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Satriale&apos;s_Pork -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Satriale&apos;s_Pork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Strong,_Silent_Type -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#The_Strong,_Silent_Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_4"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Alan_Taylor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Where&apos;s_Johnny? -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Where&apos;s_Johnny?">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Season_5"/>
+        <isDirectedBy rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#John_Patterson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victor/ontologies/the_sopranos#Woke_Up_This_Morning_(Chosen_One_Mix) -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victor/ontologies/the_sopranos#Woke_Up_This_Morning_(Chosen_One_Mix)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#OpeningTheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>An actor who won an award is an Awarded Actor.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#won"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_187bddbe_7a75_4f0c_9108_cf9fd900caf6"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>A person who directs an episode is a Director.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#directs"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>A person that is played by an actor, is a character.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#isPlayedBy"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

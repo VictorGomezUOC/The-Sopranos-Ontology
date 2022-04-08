@@ -1,0 +1,180 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#belongsTo",
+      "@type" : "@id"
+    },
+    "Creator" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Creator"
+    },
+    "SixthSeasonEpisodePart1" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart1"
+    },
+    "won" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#won",
+      "@type" : "@id"
+    },
+    "SecondSeasonEpisode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SecondSeasonEpisode"
+    },
+    "premiereRatingIs" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRatingIs",
+      "@type" : "@id"
+    },
+    "Golden_Globe_Awards" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Golden_Globe_Awards"
+    },
+    "directs" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#directs",
+      "@type" : "@id"
+    },
+    "Studios" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Studios"
+    },
+    "OpeningTheme" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#OpeningTheme"
+    },
+    "Music" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Music"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "FourthSeasonEpisode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#FourthSeasonEpisode"
+    },
+    "FictionalPlace" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#FictionalPlace"
+    },
+    "Director" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Director"
+    },
+    "plays" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#plays",
+      "@type" : "@id"
+    },
+    "averageRatingIs" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRatingIs",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Character" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Character"
+    },
+    "ThirdSeasonEpisode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#ThirdSeasonEpisode"
+    },
+    "premiereRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#premiereRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "FirstSeasonEpisode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#FirstSeasonEpisode"
+    },
+    "Episode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Episode"
+    },
+    "SeasonFinaleRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonFinaleRating"
+    },
+    "Person" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Person"
+    },
+    "Award" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Award"
+    },
+    "averageRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#averageRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Actor" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Actor"
+    },
+    "finaleRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Producer" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Producer"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "isDirectedBy" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#isDirectedBy",
+      "@type" : "@id"
+    },
+    "RealPlace" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#RealPlace"
+    },
+    "finaleRatingIs" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#finaleRatingIs",
+      "@type" : "@id"
+    },
+    "SixthSeasonEpisodePart2" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SixthSeasonEpisodePart2"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Rating"
+    },
+    "Place" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Place"
+    },
+    "FifthSeasonEpisode" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#FifthSeasonEpisode"
+    },
+    "OWLClass_8ddf577b_0a40_469d_9843_98ba9147f461" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_8ddf577b_0a40_469d_9843_98ba9147f461"
+    },
+    "numSeasonEpisodes" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#numSeasonEpisodes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SeasonAverageRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonAverageRating"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Year"
+    },
+    "OriginalSoundTrack" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#OriginalSoundTrack"
+    },
+    "isPlayedBy" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#isPlayedBy",
+      "@type" : "@id"
+    },
+    "SeasonPremiereRating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#SeasonPremiereRating"
+    },
+    "isWonBy" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#isWonBy",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "OWLClass_187bddbe_7a75_4f0c_9108_cf9fd900caf6" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos:OWLClass_187bddbe_7a75_4f0c_9108_cf9fd900caf6"
+    },
+    "rating" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#rating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Primetime_Emmy_Awards" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Primetime_Emmy_Awards"
+    },
+    "Season" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#Season"
+    },
+    "airedIn" : {
+      "@id" : "http://www.semanticweb.org/victor/ontologies/the_sopranos#airedIn",
+      "@type" : "@id"
+    }
+  }
+}
